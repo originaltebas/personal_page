@@ -110,7 +110,7 @@ h5 {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	background-image: url(http://marinamarques.pt/img/preloader.gif);
+	background-image: url(../img/preloader.gif);
 	background-repeat: no-repeat;
 	background-position: center;
 	margin: -100px 0 0 -100px;
@@ -130,6 +130,28 @@ h5 {
 	padding: 0px 15px;
 	height: 56px;
 	margin-left: 0;
+	float: left;
+}
+
+
+.flags {
+	margin: 0 auto;
+	width: 60%;
+	vertical-align: middle;
+	display: inline-block;
+	height: 56px}
+
+
+.a-flags {
+	font-family: 'Montserrat','Roboto', sans-serif;
+	padding-left: 3em;
+	color:white;
+	line-height: 56px;
+}
+
+.a-flags:hover {
+	color:#F16A70;
+	cursor: pointer;
 }
 
 .navbar {
@@ -157,7 +179,7 @@ h5 {
 }
 
 #ResponsiveNav li a {
-	font-size: 16px;
+	font-size: 1.25em;
 	color: #fff;
 	font-weight: 700;
 	display: inline-block;
@@ -167,7 +189,7 @@ h5 {
 	-webkit-transition: all .40s ease-in-out;
 	transition: all .40s ease-in-out;
 	font-family: 'Roboto', sans-serif;
-	text-transform: lowercase;
+	text-transform: capitalize;
 }
 
 #ResponsiveNav li a:after {
@@ -191,7 +213,7 @@ h5 {
 #ResponsiveNav ul li a:hover:after,
 #ResponsiveNav ul li a:focus:after,
 #ResponsiveNav ul li a:active:after {
-	width: 70%;
+	width: 90%;
 }
 
 button.navbar-toggle.collapsed {
@@ -229,7 +251,9 @@ button.navbar-toggle.collapsed {
 }
 
 .navbar-nav>li {
-	float: none;
+	/*float: left;*/
+	display: inline;
+	margin-right: 2em;
 }
 
 .navbar-collapse.collapse.in {
@@ -248,7 +272,7 @@ button.navbar-toggle.collapsed {
 	height: auto;
 	text-align: center;
 	color: white;
-	background: url(http://marinamarques.pt/img/mm_header.jpg) no-repeat top center scroll;
+	background: url(../img/banner_personal.jpg) no-repeat top center scroll;
 	background-size: cover;
 	-o-background-size: cover;
 }
@@ -315,44 +339,116 @@ span.city {
 	background: #fff;
 	position: relative;
 	left: 10px;
-	-webkit-animation: scrolls 1.3s ease-out infinite;
+	-webkit-animation: scrolls 1.3s ease-out infinite; /* Safari 4+ Chrome Opera */
+	-moz-animation:    scrolls 1.3s ease-out infinite; /* Fx 5+ */
+	-o-animation:      scrolls 1.3s ease-out infinite; /* Opera pre-Webkit */
+	animation:         scrolls 1.3s ease-out infinite; /* IE 10+, Fx 29+ */
+
 }
 
+/*chrome safari opera*/
 @-webkit-keyframes scrolls {
 	0% {
 		top: 8px;
 		opacity: 0;
-		-webkit-transform: scaleY(1) scaleX(1);
+		-ms-transform: scaleY(1) scaleX(1); /* IE 9 */
+		-webkit-transform: scaleY(1) scaleX(1); /* Safari Chrome Opera */
+		transform: scaleY(1) scaleX(1); /* Firefox */
 	}
 	5% {
 		top: 8px;
 		opacity: 0.8;
-		-webkit-transform: scaleY(1.2) scaleX(1.2);
+		-ms-transform: scaleY(1.2) scaleX(1.2); /* IE 9 */
+		-webkit-transform: scaleY(1.2) scaleX(1.2); /* Safari Chrome Opera */
+		transform: scaleY(1.2) scaleX(1.2); /* Firefox */
 	}
 	10% {
 		top: 8px;
 		opacity: 1;
-		-webkit-transform: scaleY(1.6) scaleX(1.6);
+		-ms-transform: scaleY(1.6) scaleX(1.6); /* IE 9 */
+		-webkit-transform: scaleY(1.6) scaleX(1.6); /* Safari Chrome Opera */
+		transform: scaleY(1.6) scaleX(1.6); /* Firefox */
 	}
 	15% {
 		top: 8px;
 		opacity: 1;
-		-webkit-transform: scaleY(1.2) scaleX(1.2);
+		-ms-transform: scaleY(1.2) scaleX(1.2); /* IE 9 */
+		-webkit-transform: scaleY(1.2) scaleX(1.2); /* Safari Chrome Opera */
+		transform: scaleY(1.2) scaleX(1.2); /* Firefox */
 	}
 	20% {
 		top: 8px;
 		opacity: 1;
-		-webkit-transform: scaleY(1.2) scaleX(1.2);
+		-ms-transform: scaleY(1.2) scaleX(1.2); /* IE 9 */
+		-webkit-transform: scaleY(1.2) scaleX(1.2); /* Safari Chrome Opera */
+		transform: scaleY(1.2) scaleX(1.2); /* Firefox */
 	}
 	30% {
 		top: 15px;
 		opacity: 1;
-		-webkit-transform: scaleY(1.2) scaleX(1.2);
+		-ms-transform: scaleY(1.2) scaleX(1.2); /* IE 9 */
+		-webkit-transform: scaleY(1.2) scaleX(1.2); /* Safari Chrome Opera */
+		transform: scaleY(1.2) scaleX(1.2); /* Firefox */
 	}
 	100% {
 		top: 30px;
 		opacity: 0;
-		-webkit-transform: scaleY(1.2) scaleX(0.8);
+		-ms-transform: scaleY(1.2) scaleX(0.8); /* IE 9 */
+		-webkit-transform: scaleY(1.2) scaleX(0.8); /* Safari Chrome Opera */
+		transform: scaleY(1.2) scaleX(0.8); /* Firefox */
+	}
+}
+
+/* Standard syntax */
+@keyframes scrolls {
+	0% {
+		top: 8px;
+		opacity: 0;
+		-ms-transform: scaleY(1) scaleX(1); /* IE 9 */
+		-webkit-transform: scaleY(1) scaleX(1); /* Safari Chrome Opera */
+		transform: scaleY(1) scaleX(1); /* Firefox */
+	}
+	5% {
+		top: 8px;
+		opacity: 0.8;
+		-ms-transform: scaleY(1.2) scaleX(1.2); /* IE 9 */
+		-webkit-transform: scaleY(1.2) scaleX(1.2); /* Safari Chrome Opera */
+		transform: scaleY(1.2) scaleX(1.2); /* Firefox */
+	}
+	10% {
+		top: 8px;
+		opacity: 1;
+		-ms-transform: scaleY(1.6) scaleX(1.6); /* IE 9 */
+		-webkit-transform: scaleY(1.6) scaleX(1.6); /* Safari Chrome Opera */
+		transform: scaleY(1.6) scaleX(1.6); /* Firefox */
+	}
+	15% {
+		top: 8px;
+		opacity: 1;
+		-ms-transform: scaleY(1.2) scaleX(1.2); /* IE 9 */
+		-webkit-transform: scaleY(1.2) scaleX(1.2); /* Safari Chrome Opera */
+		transform: scaleY(1.2) scaleX(1.2); /* Firefox */
+	}
+	20% {
+		top: 8px;
+		opacity: 1;
+		-ms-transform: scaleY(1.2) scaleX(1.2); /* IE 9 */
+		-webkit-transform: scaleY(1.2) scaleX(1.2); /* Safari Chrome Opera */
+		transform: scaleY(1.2) scaleX(1.2); /* Firefox */
+	}
+	30% {
+		top: 15px;
+		opacity: 1;
+		-ms-transform: scaleY(1.2) scaleX(1.2); /* IE 9 */
+		-webkit-transform: scaleY(1.2) scaleX(1.2); /* Safari Chrome Opera */
+		transform: scaleY(1.2) scaleX(1.2); /* Firefox */
+	}
+	100% {
+		top: 30px;
+		opacity: 0;
+		-ms-transform: scaleY(1.2) scaleX(0.8); /* IE 9 */
+		-webkit-transform: scaleY(1.2) scaleX(0.8); /* Safari Chrome Opera */
+		transform: scaleY(1.2) scaleX(0.8); /* Firefox */
 	}
 }
 
@@ -378,17 +474,19 @@ span.city {
 
 .about-intro-text p {
 	float: right;
+	font-size: 1.45em;
 }
 
-.about-intro-text span {
+.about-intro-text .a  {
+	color: #F16A70;
+	font-weight: 700;
+}
+
+.about-intro-text .b {
 	color: #40E0D0;
 	font-weight: 700;
 }
 
-.about-intro-text .fa-beer {
-	color: #40E0D0;
-	font-size: 20px;
-}
 
 .button-group {
 	cursor: pointer;
@@ -885,7 +983,7 @@ div.button-weblink {
 .testimionals-bg {
 	width: 100%;
 	height: auto;
-	background: url(http://marinamarques.pt/img/mm_testimionals.jpg) no-repeat top center scroll;
+	background: url(testimonial) no-repeat top center scroll;
 	background-size: cover;
 	-o-background-size: cover;
 }
